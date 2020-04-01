@@ -24,5 +24,9 @@ export class IconService {
       'settings',
       this.domSanitizer.bypassSecurityTrustResourceUrl('../../../assets/icons/settings.svg')
     );
+    this.matIconRegistry.addSvgIcon(
+      'refresh',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('../../../assets/icons/refresh.svg')
+    );
   }
 }

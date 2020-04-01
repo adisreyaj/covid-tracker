@@ -1,15 +1,16 @@
 <nav class="bottom-nav">
   <ul class="bottom-nav__list">
-    <li class="bottom-nav__list-item menu-item active">
+    <li class="bottom-nav__list-item menu-item" [routerLink]="[ '/' ]" routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact:true}">
       <mat-icon class="menu-item__icon" svgIcon="home"></mat-icon>
     </li>
-    <li class="bottom-nav__list-item menu-item">
+    <li class="bottom-nav__list-item menu-item" [routerLink]="[ '/world' ]" routerLinkActive="active">
       <mat-icon class="menu-item__icon" svgIcon="world"></mat-icon>
     </li>
-    <li class="bottom-nav__list-item menu-item">
+    <li class="bottom-nav__list-item menu-item" [routerLink]="[ '/stats' ]" routerLinkActive="active">
       <mat-icon class="menu-item__icon" svgIcon="stats"></mat-icon>
     </li>
-    <li class="bottom-nav__list-item menu-item">
+    <li class="bottom-nav__list-item menu-item" [routerLink]="[ '/settings' ]" routerLinkActive="active">
       <mat-icon class="menu-item__icon" svgIcon="settings"></mat-icon>
     </li>
   </ul>

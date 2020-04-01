@@ -1,7 +1,17 @@
-<ng-container *ngIf="totalStats$ | async as totalStats">
-  <section class="quick-stats" fxLayout="row wrap">
-    <div class="quick-stats__item" *ngFor="let item of totalStats">
-      <app-quick-stats [data]="item"></app-quick-stats>
+<ng-container *ngIf="totalStats$ | async as totalStats;else quickStatsLoading">
+  <section class="quick-stats" fxLayout="column wrap">
+    <div class="quick-stats__heading" fxLayout="row nowrap" fxLayoutAlign="space-between center">
+      <h3>India Stats</h3>
+      <span></span>
+    </div>
+    <div class="quick-stats__container" fxLayout="row wrap">
+      <div class="quick-stats__item" *ngFor="let item of totalStats">
+        <app-quick-stats [data]="item"></app-quick-stats>
+      </div>
     </div>
   </section>
 </ng-container>
+
+<ng-template #quickStatsLoading>
+  <p>Data Loading</p>
+</ng-template>
