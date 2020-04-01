@@ -5,4 +5,13 @@
   <p class="quick-stats__label">
     {{data?.label | uppercase}}
   </p>
+  <div class="quick-stats__change" *ngIf="data?.delta !== 0" fxLayoutAlign="start center">
+    <ng-container *ngIf="data?.delta > 0">
+      <mat-icon svgIcon="up" class="color--success"></mat-icon>
+    </ng-container>
+    <ng-container *ngIf="data?.delta < 0">
+      <mat-icon svgIcon="down" class="color--error"></mat-icon>
+    </ng-container>
+    <p>{{data?.delta}}</p>
+  </div>
 </article>

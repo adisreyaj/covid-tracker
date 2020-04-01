@@ -28,5 +28,13 @@ export class IconService {
       'refresh',
       this.domSanitizer.bypassSecurityTrustResourceUrl('../../../assets/icons/refresh.svg')
     );
+    this.matIconRegistry.addSvgIcon(
+      'up',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('../../../assets/icons/up.svg')
+    );
+    this.matIconRegistry.addSvgIcon(
+      'down',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('../../../assets/icons/down.svg')
+    );
   }
 }

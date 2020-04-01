@@ -3,6 +3,7 @@
   border: 1px solid var(--accent);
   padding: 16px 20px;
   margin: 8px;
+  position: relative;
   border-radius: 0;
   &__label {
     margin: 0;
@@ -14,5 +15,14 @@
     font-weight: 600;
     margin: 0;
     font-size: 24px;
+  }
+  &__change {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    p {
+      margin: 0;
+      padding: 0;
+    }
   }
 }

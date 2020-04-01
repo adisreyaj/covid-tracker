@@ -21,7 +21,8 @@ export class HttpService {
         return keys.map(key => {
           return {
             label: key,
-            value: total[key]
+            value: total[key],
+            delta: total['delta'][key]
           };
         });
       })
