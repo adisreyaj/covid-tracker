@@ -1,0 +1,17 @@
+.quick-stats {
+  background-color: #fff;
+  border: 1px solid var(--accent);
+  padding: 16px 20px;
+  margin: 8px;
+  border-radius: 0;
+  &__label {
+    margin: 0;
+    color: var(--text-light);
+  }
+
+  &__value {
+    font-weight: 600;
+    margin: 0;
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,7 @@
+<ng-container *ngIf="totalStats$ | async as totalStats">
+  <section class="quick-stats" fxLayout="row wrap">
+    <div class="quick-stats__item" *ngFor="let item of totalStats">
+      <app-quick-stats [data]="item"></app-quick-stats>
+    </div>
+  </section>
+</ng-container>

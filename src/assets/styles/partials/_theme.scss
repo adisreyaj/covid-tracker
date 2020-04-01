@@ -1,0 +1,99 @@
+/*
+ * File: _theme.scss
+ * Project: covid-tracker
+ * Description:  
+ * File Created: Thursday, 2nd April 2020 12:07:59 am
+ * Author: Adithya Sreyaj
+ * -----
+ * Last Modified: Thursday, 2nd April 2020 12:07:59 am
+ * Modified By: Adithya Sreyaj<adi.sreyaj@gmail.com>
+ * -----
+ */
+
+@import "~@angular/material/theming";
+@include mat-core();
+
+$covid-primary: (
+  50: #e2eff2,
+  100: #b6d7df,
+  200: #86bdc9,
+  300: #55a3b3,
+  400: #308fa3,
+  500: #0c7b93,
+  600: #0a738b,
+  700: #086880,
+  800: #065e76,
+  900: #034b64,
+  A100: #94dfff,
+  A200: #61d0ff,
+  A400: #2ec1ff,
+  A700: #14b9ff,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000
+  )
+);
+$covid-accent: (
+  50: #e8e8e8,
+  100: #c6c6c6,
+  200: #a1a1a1,
+  300: #7b7b7b,
+  400: #5e5e5e,
+  500: #424242,
+  600: #3c3c3c,
+  700: #333333,
+  800: #2b2b2b,
+  900: #1d1d1d,
+  A100: #f07878,
+  A200: #eb4a4a,
+  A400: #ff0303,
+  A700: #e90000,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #ffffff,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #ffffff,
+    A400: #ffffff,
+    A700: #ffffff
+  )
+);
+
+$covid-frontend-primary: mat-palette($covid-primary, 500);
+$covid-frontend-accent: mat-palette($covid-accent, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$covid-frontend-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$covid-frontend-theme: mat-light-theme(
+  $covid-frontend-primary,
+  $covid-frontend-accent,
+  $covid-frontend-warn
+);
+@include angular-material-theme($covid-frontend-theme);
+
+$covid-typography: mat-typography-config(
+  $font-family: "'Oswald', sans-serif"
+);
+
+@include angular-material-typography($covid-typography);
