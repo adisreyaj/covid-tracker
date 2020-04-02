@@ -26,7 +26,8 @@
     <div class="state-info__search" fxLayoutAlign="start center">
       <div class="search__input" fxFlex="100">
         <mat-icon svgIcon="search" class="search__icon"></mat-icon>
-        <input type="text" placeholder="Search state" [formControl]="searchTerm" #search>
+        <input type="text" role="searchbox" aria-label="Search" placeholder="Search state" [formControl]="searchTerm"
+               #search id="search">
         <!-- <button mat-icon-button *ngIf="search.value.length > 0">
           <mat-icon svgIcon="backspace"></mat-icon>
         </button> -->

@@ -5,7 +5,7 @@
       <span>Active: <strong>{{data?.active}}</strong></span>
     </div>
     <div class="category__action" fxLayoutAlign="start center" fxLayoutGap="16px">
-      <button mat-icon-button>
+      <button mat-icon-button role="button" aria-label="More Details">
         <mat-icon class="category__action-toggle" svgIcon="arrow_down" [ngClass]="{'invert': expanded}"></mat-icon>
       </button>
 
