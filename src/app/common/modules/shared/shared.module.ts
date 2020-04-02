@@ -16,10 +16,11 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { QuickStatsComponent } from '../../components/quick-stats/quick-stats.component';
 import { MaterialModule } from '../material/material.module';
+import { CategoryCardComponent } from '../../components/category-card/category-card.component';
 
 @NgModule({
-  declarations: [QuickStatsComponent],
+  declarations: [QuickStatsComponent, CategoryCardComponent],
   imports: [CommonModule, MaterialModule, FlexLayoutModule],
-  exports: [QuickStatsComponent]
+  exports: [QuickStatsComponent, CategoryCardComponent]
 })
 export class SharedModule {}

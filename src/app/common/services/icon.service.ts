@@ -36,5 +36,21 @@ export class IconService {
       'down',
       this.domSanitizer.bypassSecurityTrustResourceUrl('../../../assets/icons/down.svg')
     );
+    this.matIconRegistry.addSvgIcon(
+      'arrow_up',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('../../../assets/icons/arrow_up.svg')
+    );
+    this.matIconRegistry.addSvgIcon(
+      'arrow_down',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('../../../assets/icons/arrow_down.svg')
+    );
+    this.matIconRegistry.addSvgIcon(
+      'share_new_tab',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('../../../assets/icons/share_new_tab.svg')
+    );
+    this.matIconRegistry.addSvgIcon(
+      'share',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('../../../assets/icons/share.svg')
+    );
   }
 }

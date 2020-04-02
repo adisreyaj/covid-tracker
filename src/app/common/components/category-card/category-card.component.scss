@@ -1,0 +1,77 @@
+.category-card {
+  padding: 16px 24px;
+  margin: 8px 0;
+  border: 1px solid rgba($color: #000000, $alpha: 0.2);
+  background-color: #fff;
+  .category {
+    &__heading {
+      p {
+        margin: 0;
+        padding: 0;
+      }
+      span {
+        font-size: 13px;
+        color: var(--text-light);
+        strong {
+          color: var(--primary);
+        }
+      }
+    }
+    &__action {
+      &-toggle {
+        transition: all 0.2s ease-in;
+        &.invert {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+  &:hover {
+    // box-shadow: 0px 5px 10px -6px rgba(0, 0, 0, 0.387);
+    border: 1px solid var(--accent);
+    .category {
+      &__heading {
+        p {
+          color: var(--accent);
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  &__body {
+    padding: 16px 0 0;
+    .info-cards {
+      &__item {
+        padding: 8px;
+        &-content {
+          padding: 8px;
+          color: #fff;
+          background-color: var(--accent);
+        }
+        &:nth-child(1) {
+          padding-left: 0 !important;
+        }
+        &:nth-last-child(1) {
+          padding-right: 0 !important;
+        }
+      }
+      &__value {
+        font-weight: 600;
+      }
+      &__label {
+        font-size: 13px;
+        font-weight: 300;
+        letter-spacing: 1px;
+      }
+    }
+    .actions {
+      margin-top: 20px;
+      width: 100%;
+      button {
+        color: var(--text-light);
+        font-weight: 300;
+      }
+    }
+  }
+}

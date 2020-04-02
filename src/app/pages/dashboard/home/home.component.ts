@@ -8,9 +8,11 @@ import { HttpService } from '../../../common/services/http.service';
 })
 export class HomeComponent implements OnInit {
   totalStats$;
+  stateWiseData$;
   constructor(private httpService: HttpService) {}
 
   ngOnInit(): void {
     this.totalStats$ = this.httpService.getTotalStatus();
+    this.stateWiseData$ = this.httpService.getStateWiseData();
   }
 }

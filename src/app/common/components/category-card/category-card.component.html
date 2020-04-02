@@ -1,0 +1,52 @@
+<article class="category-card">
+  <section class="category-card__header" fxLayoutAlign="space-between center" (click)="toggleBody()">
+    <div class="category__heading">
+      <p>{{data?.state}}</p>
+      <span>Active: <strong>{{data?.active}}</strong></span>
+    </div>
+    <div class="category__action" fxLayoutAlign="start center" fxLayoutGap="16px">
+      <button mat-icon-button>
+        <mat-icon class="category__action-toggle" svgIcon="arrow_down" [ngClass]="{'invert': expanded}"></mat-icon>
+      </button>
+
+    </div>
+  </section>
+  <section class="category-card__body" *ngIf="expanded">
+    <div class="info-cards" fxLayout="row nowrap">
+      <article class="info-cards__item" fxFlex="33.33">
+        <div class="info-cards__item-content" fxLayout="column">
+          <span class="info-cards__value">
+            {{data?.confirmed}}
+          </span>
+          <span class="info-cards__label">Confirmed</span>
+        </div>
+      </article>
+      <article class="info-cards__item" fxFlex="33.33">
+        <div class="info-cards__item-content" fxLayout="column">
+          <span class="info-cards__value">
+            {{data?.deaths}}
+          </span>
+          <span class="info-cards__label">Deaths</span>
+        </div>
+      </article>
+      <article class="info-cards__item" fxFlex="33.33">
+        <div class="info-cards__item-content" fxLayout="column">
+          <span class="info-cards__value">
+            {{data?.recovered}}
+          </span>
+          <span class="info-cards__label">Recovered</span>
+        </div>
+      </article>
+    </div>
+    <div class="actions" fxLayout="row" fxLayoutGap="16px" fxLayoutAlign="center center">
+      <button mat-button>
+        <mat-icon class="category__action-icon" svgIcon="share"></mat-icon>
+        <span>&nbsp;Share Info</span>
+      </button>
+      <button mat-button>
+        <mat-icon class="category__action-icon" svgIcon="share_new_tab"></mat-icon>
+        <span> &nbsp;More Details</span>
+      </button>
+    </div>
+  </section>
+</article>
