@@ -18,6 +18,17 @@
       <p>Data Loading</p>
     </ng-template>
   </section>
+  <ng-container *ngIf="contactInfo$| async as contactInfo">
+    <section class="contact-section">
+      <div class="section__heading" fxLayout="row nowrap" fxLayoutAlign="space-between center">
+        <h3>Contacts</h3>
+        <span></span>
+      </div>
+      <div class="contact-info">
+        <app-contact-info [data]="contactInfo"></app-contact-info>
+      </div>
+    </section>
+  </ng-container>
   <section class="state-info">
     <div class="section__heading" fxLayout="row nowrap" fxLayoutAlign="space-between center">
       <h3>State Wise</h3>

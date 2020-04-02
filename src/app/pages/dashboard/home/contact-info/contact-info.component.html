@@ -1,0 +1,28 @@
+<div class="contact">
+  <div class="contact__info">
+    <p>Phone Number:&nbsp;<span>
+        <a href="tel:{{data?.number}}">
+          {{data?.number}}
+        </a>
+      </span></p>
+    <p>Toll Free Number:&nbsp;<span>
+        <a href="tel:{{data['number-tollfree']}}">
+          {{data['number-tollfree']}}
+        </a>
+      </span></p>
+    <p>Email:&nbsp;<span>
+        <a href="mailto:{{data?.email}}">{{data?.email}}</a>
+      </span></p>
+  </div>
+  <div class="contact__socials" fxLayout="row" fxLayoutGap="24px">
+    <a href="https://www.mohfw.gov.in/" target="_blank" rel="noopener noreferrer">
+      <mat-icon svgIcon="web"></mat-icon>
+    </a>
+    <a href="{{data?.facebook}}" target="_blank" rel="noopener noreferrer">
+      <mat-icon svgIcon="facebook"></mat-icon>
+    </a>
+    <a href="{{data?.twitter}}" target="_blank" rel="noopener noreferrer">
+      <mat-icon svgIcon="twitter"></mat-icon>
+    </a>
+  </div>
+</div>

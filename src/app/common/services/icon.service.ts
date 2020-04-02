@@ -68,5 +68,17 @@ export class IconService {
       'moon',
       this.domSanitizer.bypassSecurityTrustResourceUrl('../../../assets/icons/moon.svg')
     );
+    this.matIconRegistry.addSvgIcon(
+      'web',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('../../../assets/icons/web.svg')
+    );
+    this.matIconRegistry.addSvgIcon(
+      'facebook',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('../../../assets/icons/facebook.svg')
+    );
+    this.matIconRegistry.addSvgIcon(
+      'twitter',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('../../../assets/icons/twitter.svg')
+    );
   }
 }

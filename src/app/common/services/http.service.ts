@@ -2,11 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { shareReplay, map, filter, tap } from 'rxjs/operators';
 import { environment } from '../../../environments/environment';
+import { ContactInfo } from '../interfaces/contacts.interface';
 @Injectable({
   providedIn: 'root'
 })
 export class HttpService {
   endpoint = environment.data_url;
+  contactsEndpoint = environment.contact_url;
   constructor(private http: HttpClient) {}
 
   getLatestData() {
@@ -40,5 +42,13 @@ export class HttpService {
         });
       })
     );
+  }
+
+  getContactDetails() {
+    return this.http.get<ContactInfo>(this.contactsEndpoint).pipe(shareReplay(1));
+  }
+
+  getPrimaryContactDetails() {
+    return this.getContactDetails().pipe(map(data => data.data.contacts.primary));
   }
 }

@@ -5,7 +5,8 @@
       <p class="header__branding-text">Covid-19 Tracker</p>
     </div>
     <div class="theme-switcher">
-      <div (click)="toggleTheme()">
+      <div (click)="toggleTheme()" fxLayout="row nowrap" fxLayoutGap="8px" fxLayoutAlign="start center">
+        <span [ngStyle]="{'color': isDarkMode ? '#fff' : '#000'}">Change Theme</span>
         <mat-icon svgIcon="moon" *ngIf="!isDarkMode"></mat-icon>
         <mat-icon svgIcon="sun" *ngIf="isDarkMode" style="color: #fff;"></mat-icon>
       </div>

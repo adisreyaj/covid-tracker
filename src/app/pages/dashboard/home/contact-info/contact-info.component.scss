@@ -1,0 +1,31 @@
+.contact {
+  border: 1px solid var(--accent);
+  background-color: var(--background-light);
+  padding: 16px;
+  &__info {
+    p {
+      color: var(--text-primary);
+      font-weight: 300;
+      a {
+        color: var(--accent);
+      }
+      span {
+        color: var(--accent);
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__socials {
+    margin-top: 24px;
+    a {
+      text-decoration: none;
+      color: var(--accent);
+      mat-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 28px;
+      }
+    }
+  }
+}
