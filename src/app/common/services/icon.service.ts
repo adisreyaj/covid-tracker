@@ -52,5 +52,13 @@ export class IconService {
       'share',
       this.domSanitizer.bypassSecurityTrustResourceUrl('../../../assets/icons/share.svg')
     );
+    this.matIconRegistry.addSvgIcon(
+      'backspace',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('../../../assets/icons/backspace.svg')
+    );
+    this.matIconRegistry.addSvgIcon(
+      'search',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('../../../assets/icons/search.svg')
+    );
   }
 }

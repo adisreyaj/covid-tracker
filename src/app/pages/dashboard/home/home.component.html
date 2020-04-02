@@ -23,6 +23,16 @@
       <h3>State Wise</h3>
       <span></span>
     </div>
+    <div class="state-info__search" fxLayoutAlign="start center">
+      <div class="search__input" fxFlex="100">
+        <mat-icon svgIcon="search" class="search__icon"></mat-icon>
+        <input type="text" placeholder="Search state" [formControl]="searchTerm" #search>
+        <!-- <button mat-icon-button *ngIf="search.value.length > 0">
+          <mat-icon svgIcon="backspace"></mat-icon>
+        </button> -->
+      </div>
+      <!-- <button mat-flat-button color="primary" class="search__button" fxFlex="20">Search</button> -->
+    </div>
     <ng-container *ngIf="stateWiseData$ | async as stateWiseData">
       <div class="state-info__items" *ngFor="let state of stateWiseData">
         <app-category-card [data]="state"></app-category-card>
