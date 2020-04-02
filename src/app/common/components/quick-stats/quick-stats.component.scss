@@ -1,5 +1,5 @@
 .quick-stats {
-  background-color: #fff;
+  background-color: var(--background-light);
   border: 1px solid var(--accent);
   padding: 16px 20px;
   margin: 8px;
@@ -12,6 +12,7 @@
   }
 
   &__value {
+    color: var(--text-primary);
     font-weight: 600;
     margin: 0;
     font-size: 24px;
@@ -21,6 +22,7 @@
     bottom: 16px;
     right: 16px;
     p {
+      color: var(--text-light);
       margin: 0;
       padding: 0;
     }

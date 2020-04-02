@@ -1,24 +1,26 @@
 .category-card {
   padding: 16px 24px;
   margin: 8px 0;
-  border: 1px solid rgba($color: #000000, $alpha: 0.2);
-  background-color: #fff;
+  border: 1px solid var(--text-light);
+  background-color: var(--background-light);
   .category {
     &__heading {
       p {
         margin: 0;
         padding: 0;
+        color: var(--text-primary);
       }
       span {
         font-size: 13px;
         color: var(--text-light);
         strong {
-          color: var(--primary);
+          color: var(--text-light);
         }
       }
     }
     &__action {
       &-toggle {
+        color: var(--text-primary);
         transition: all 0.2s ease-in;
         &.invert {
           transform: rotate(180deg);

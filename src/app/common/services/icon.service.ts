@@ -60,5 +60,13 @@ export class IconService {
       'search',
       this.domSanitizer.bypassSecurityTrustResourceUrl('../../../assets/icons/search.svg')
     );
+    this.matIconRegistry.addSvgIcon(
+      'sun',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('../../../assets/icons/sun.svg')
+    );
+    this.matIconRegistry.addSvgIcon(
+      'moon',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('../../../assets/icons/moon.svg')
+    );
   }
 }
