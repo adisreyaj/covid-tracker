@@ -1,27 +1,37 @@
-# CovidTracker
+# Covid 19 Tracker
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
+Covid 19 Tracker keeps you updated with the latest numbers of Covid reports from around the world. Keep watch on the numbers and Stay Home Stay Safe
 
-## Development server
+![Covid Tracker](./covid-tracker.jpg)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+1. Dark Mode 🔥
+1. Installable (PWA) 💥
+1. Minimal Design 💯
+1. CSS Variables for theming 🎉
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Installation
 
-## Build
+1. Clone or download the repo.
+2. Install dependencies
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```bash
+npm install
+```
 
-## Running unit tests
+3. Run the development server
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+npm start
+```
 
-## Running end-to-end tests
+## Contributing
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-## Further help
+Please make sure to update the tests as appropriate.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
