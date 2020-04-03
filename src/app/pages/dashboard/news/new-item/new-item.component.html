@@ -1,0 +1,15 @@
+<div class="news-item">
+  <div class="news-item__header" fxLayout="column" fxLayoutAlign="center start">
+    <p class="news-item__header-title">{{news?.title}}</p>
+  </div>
+  <div class="news-item__body">
+    <p>{{news?.content}}</p>
+  </div>
+  <div class="news-item__footer" fxLayoutAlign="space-between center">
+    <div fxLayout="column">
+      <p>Sourced From: {{news?.source?.name}}</p>
+      <p>Published On: {{news?.publishedAt | date: 'dd-MMM-yy'}}</p>
+    </div>
+    <a href="{{news?.url}}" rel="noopener noreferrer" target="_blank">Read More</a>
+  </div>
+</div>

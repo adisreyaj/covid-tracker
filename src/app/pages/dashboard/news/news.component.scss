@@ -1,0 +1,19 @@
+.section__heading {
+  h3 {
+    padding: 0 8px;
+    margin: 0;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    position: relative;
+    flex: 0 0 25%;
+  }
+  span {
+    height: 1px;
+    width: 90%;
+    margin-right: 8px;
+    background-color: var(--text-light);
+  }
+}
+.news {
+  padding: 16px 16px 100px;
+}

@@ -18,7 +18,8 @@ const routes: Routes = [
       {
         path: 'view/:state',
         loadChildren: () => import('./state-detail/state-detail.module').then(m => m.StateDetailModule)
-      }
+      },
+      { path: 'news', loadChildren: () => import('./news/news.module').then(m => m.NewsModule) }
     ]
   }
 ];

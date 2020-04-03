@@ -1,0 +1,9 @@
+<div class="news">
+  <div class="section__heading" fxLayout="row nowrap" fxLayoutAlign="space-between center">
+    <h3>Latest News</h3>
+    <span></span>
+  </div>
+  <ng-container *ngIf="news$ | async as news">
+    <app-new-item *ngFor="let item of news.articles" [news]="item"></app-new-item>
+  </ng-container>
+</div>

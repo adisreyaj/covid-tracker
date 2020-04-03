@@ -1,0 +1,33 @@
+.news-item {
+  border: 1px solid var(--text-primary);
+  padding: 16px;
+  margin: 16px 4px;
+  &__header {
+    color: var(--accent);
+    &-image {
+      width: 100%;
+    }
+    &-title {
+      font-weight: 600;
+    }
+  }
+  &__body {
+    color: var(--text-primary);
+  }
+  &__footer {
+    border-top: 1px solid var(--text-light);
+    margin-top: 20px;
+    padding-top: 12px;
+    p {
+      margin: 0;
+      color: var(--text-light);
+    }
+    a {
+      background-color: var(--accent);
+      text-decoration: none;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 0;
+    }
+  }
+}

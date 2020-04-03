@@ -5,6 +5,7 @@ import { environment } from '../../../environments/environment';
 import { ContactInfo } from '../interfaces/contacts.interface';
 import { DistrictData } from '../interfaces/district-data.interface';
 import { WorldStats } from '../interfaces/stats.interface';
+import { NewsData } from '../interfaces/news.interface';
 @Injectable({
   providedIn: 'root'
 })
@@ -13,6 +14,7 @@ export class HttpService {
   contactsEndpoint = environment.contact_url;
   districtDataEndpoint = environment.district_data_url;
   worldStatsEndpoint = environment.world_stats_url;
+  news_url = environment.news_url;
   constructor(private http: HttpClient) {}
 
   getWorldStats() {
@@ -82,5 +84,9 @@ export class HttpService {
         })
       )
     );
+  }
+
+  getNews() {
+    return this.http.get<NewsData>(this.news_url);
   }
 }
