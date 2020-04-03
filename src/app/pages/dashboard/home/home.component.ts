@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   totalStats$;
   stateWiseData$;
   contactInfo$;
-
+  worldStats$;
   searchTerm: FormControl;
   private subs = new SubSink();
   constructor(private httpService: HttpService) {}
@@ -22,6 +22,16 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.searchTerm = new FormControl();
     this.totalStats$ = this.httpService.getTotalStatus();
     this.stateWiseData$ = this.httpService.getStateWiseData();
+    this.worldStats$ = this.httpService.getWorldStats().pipe(
+      map(data => {
+        return [
+          { label: 'Cases', value: data.cases },
+          { label: 'Active', value: data.active },
+          { label: 'Deaths', value: data.deaths },
+          { label: 'Recovered', value: data.recovered }
+        ];
+      })
+    );
     this.getPrimaryContactDetails();
     this.listenToSearchInputAndFilterData();
   }

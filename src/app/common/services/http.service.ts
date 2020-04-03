@@ -4,6 +4,7 @@ import { shareReplay, map, filter, tap } from 'rxjs/operators';
 import { environment } from '../../../environments/environment';
 import { ContactInfo } from '../interfaces/contacts.interface';
 import { DistrictData } from '../interfaces/district-data.interface';
+import { WorldStats } from '../interfaces/stats.interface';
 @Injectable({
   providedIn: 'root'
 })
@@ -11,8 +12,12 @@ export class HttpService {
   endpoint = environment.data_url;
   contactsEndpoint = environment.contact_url;
   districtDataEndpoint = environment.district_data_url;
+  worldStatsEndpoint = environment.world_stats_url;
   constructor(private http: HttpClient) {}
 
+  getWorldStats() {
+    return this.http.get<WorldStats>(this.worldStatsEndpoint);
+  }
   getLatestData() {
     return this.http.get<any>(this.endpoint).pipe(shareReplay(1));
   }

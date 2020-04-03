@@ -1,5 +1,18 @@
 <main class="container">
   <section>
+    <ng-container *ngIf="worldStats$ | async as worldStats;else quickStatsLoading">
+      <section class="quick-stats" fxLayout="column wrap">
+        <div class="section__heading" fxLayout="row nowrap" fxLayoutAlign="space-between center">
+          <h3>World Stats</h3>
+          <span></span>
+        </div>
+        <div class="section__container" fxLayout="row wrap">
+          <div class="quick-stats__item" *ngFor="let item of worldStats">
+            <app-quick-stats [data]="item"></app-quick-stats>
+          </div>
+        </div>
+      </section>
+    </ng-container>
     <ng-container *ngIf="totalStats$ | async as totalStats;else quickStatsLoading">
       <section class="quick-stats" fxLayout="column wrap">
         <div class="section__heading" fxLayout="row nowrap" fxLayoutAlign="space-between center">

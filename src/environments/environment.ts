@@ -6,7 +6,8 @@ export const environment = {
   production: false,
   data_url: 'https://api.covid19india.org/data.json',
   contact_url: 'https://api.rootnet.in/covid19-in/contacts',
-  district_data_url: 'https://api.covid19india.org/state_district_wise.json'
+  district_data_url: 'https://api.covid19india.org/state_district_wise.json',
+  world_stats_url: 'https://corona.lmao.ninja/all'
 };
 
 /*
