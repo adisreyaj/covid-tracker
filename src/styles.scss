@@ -19,6 +19,9 @@ body {
     color: var(--error) !important;
   }
 }
+button {
+  border-radius: 0 !important;
+}
 
 .container {
   padding-bottom: 100px;

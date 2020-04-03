@@ -3,7 +3,25 @@
     <h3>Latest News</h3>
     <span></span>
   </div>
-  <ng-container *ngIf="news$ | async as news">
+  <ng-container *ngIf="news$ | async as news; else loading">
     <app-new-item *ngFor="let item of news.articles" [news]="item"></app-new-item>
   </ng-container>
+
+  <ng-template #loading>
+    <div class="news-loading" fxLayout="column" fxLayoutGap="16px">
+      <span class="news-loading__header"></span>
+      <span class="news-loading__body"></span>
+      <span class="news-loading__footer"></span>
+    </div>
+    <div class="news-loading" fxLayout="column" fxLayoutGap="16px">
+      <span class="news-loading__header"></span>
+      <span class="news-loading__body"></span>
+      <span class="news-loading__footer"></span>
+    </div>
+    <div class="news-loading" fxLayout="column" fxLayoutGap="16px">
+      <span class="news-loading__header"></span>
+      <span class="news-loading__body"></span>
+      <span class="news-loading__footer"></span>
+    </div>
+  </ng-template>
 </div>

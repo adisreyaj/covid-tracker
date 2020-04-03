@@ -88,5 +88,9 @@ export class IconService {
       'news',
       this.domSanitizer.bypassSecurityTrustResourceUrl('../../../assets/icons/news.svg')
     );
+    this.matIconRegistry.addSvgIcon(
+      'info',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('../../../assets/icons/info.svg')
+    );
   }
 }

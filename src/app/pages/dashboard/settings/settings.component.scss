@@ -9,3 +9,46 @@
  * Modified By: Adithya Sreyaj<adi.sreyaj@gmail.com>
  * -----
  */
+
+.settings {
+  position: relative;
+  padding: 24px 24px 100px;
+  &__item {
+    padding: 16px;
+    margin: 8px 0;
+    // border: 1px solid var(--text-light);
+    h4 {
+      margin-bottom: 0;
+      color: var(--text-primary);
+    }
+    mat-icon {
+      width: 30px;
+      height: 30px;
+      font-size: 30px;
+    }
+    &-socials {
+      a {
+        text-decoration: none;
+        color: var(--accent);
+      }
+    }
+  }
+  p,
+  mat-icon {
+    color: var(--text-primary);
+  }
+}
+
+.credits {
+  text-align: center;
+  width: 100%;
+  font-weight: 300;
+  position: absolute;
+  color: var(--text-primary);
+  bottom: 100px;
+  margin: 0 auto;
+  span {
+    font-weight: 400;
+    color: var(--accent);
+  }
+}
