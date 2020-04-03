@@ -1,0 +1,52 @@
+<ng-container *ngIf="districtData$ | async as districtData">
+  <section class="district">
+    <div class="section__heading" fxLayout="row nowrap" fxLayoutAlign="space-between center">
+      <h3>{{districtData?.contact?.loc}}</h3>
+      <span></span>
+    </div>
+    <section>
+      <app-india-map [selectedState]="districtData?.contact?.loc"></app-india-map>
+    </section>
+    <section class="district__contact" fxLayoutAlign="space-between center">
+      <div>
+        <p>Covid Helpline:</p>
+        <p>
+          {{districtData?.contact.number}}
+        </p>
+      </div>
+      <a href="tel:+{{districtData?.contact.number}}" class="district__contact-icon">
+        <mat-icon svgIcon="phone"></mat-icon>
+      </a>
+    </section>
+    <div class="district__info">
+      <div class="district__info__search" fxLayoutAlign="start center">
+        <div class="search__input" fxFlex="100">
+          <mat-icon svgIcon="search" class="search__icon"></mat-icon>
+          <input type="text" role="searchbox" aria-label="Search" placeholder="Search District" name="search" #search
+                 id="search">
+          <!-- <button mat-icon-button *ngIf="search.value.length > 0">
+                    <mat-icon svgIcon="backspace"></mat-icon>
+                  </button> -->
+        </div>
+        <!-- <button mat-flat-button color="primary" class="search__button" fxFlex="20">Search</button> -->
+      </div>
+      <div class="district__item" *ngFor="let item of districtData.stats" fxLayoutAlign="space-between center">
+        <div fxLayout="column">
+          <p class="data-label">{{item?.loc}}</p>
+          <p class="data-value">Confirmed: <span>
+              {{item?.data?.confirmed}}
+            </span></p>
+        </div>
+        <div class="quick-stats__change" *ngIf="item?.data?.delta?.confirmed !== 0" fxLayoutAlign="start center">
+          <ng-container *ngIf="item?.data?.delta?.confirmed > 0">
+            <mat-icon svgIcon="up" class="color--error"></mat-icon>
+          </ng-container>
+          <ng-container *ngIf="item?.data?.delta?.confirmed < 0">
+            <mat-icon svgIcon="down" class="color--success"></mat-icon>
+          </ng-container>
+          <p>{{item?.data?.delta?.confirmed}}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</ng-container>

@@ -3,12 +3,14 @@ import { HttpClient } from '@angular/common/http';
 import { shareReplay, map, filter, tap } from 'rxjs/operators';
 import { environment } from '../../../environments/environment';
 import { ContactInfo } from '../interfaces/contacts.interface';
+import { DistrictData } from '../interfaces/district-data.interface';
 @Injectable({
   providedIn: 'root'
 })
 export class HttpService {
   endpoint = environment.data_url;
   contactsEndpoint = environment.contact_url;
+  districtDataEndpoint = environment.district_data_url;
   constructor(private http: HttpClient) {}
 
   getLatestData() {
@@ -50,5 +52,30 @@ export class HttpService {
 
   getPrimaryContactDetails() {
     return this.getContactDetails().pipe(map(data => data.data.contacts.primary));
+  }
+
+  getDistrictData() {
+    return this.http.get<DistrictData>(this.districtDataEndpoint).pipe(shareReplay(1));
+  }
+
+  getContactDetailsOfState(state: string) {
+    return this.getContactDetails().pipe(
+      map(data => {
+        return data.data.contacts.regional.find(region => region.loc === state);
+      })
+    );
+  }
+
+  getDistrictDataForState(state: string) {
+    return this.getDistrictData().pipe(
+      map(data =>
+        Object.keys(data[state].districtData).map(item => {
+          return {
+            loc: item,
+            data: data[state].districtData[item]
+          };
+        })
+      )
+    );
   }
 }

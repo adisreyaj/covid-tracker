@@ -14,7 +14,11 @@ const routes: Routes = [
       },
       { path: 'world', loadChildren: () => import('./world/world.module').then(m => m.WorldModule) },
       { path: 'stats', loadChildren: () => import('./stats/stats.module').then(m => m.StatsModule) },
-      { path: 'settings', loadChildren: () => import('./settings/settings.module').then(m => m.SettingsModule) }
+      { path: 'settings', loadChildren: () => import('./settings/settings.module').then(m => m.SettingsModule) },
+      {
+        path: 'view/:state',
+        loadChildren: () => import('./state-detail/state-detail.module').then(m => m.StateDetailModule)
+      }
     ]
   }
 ];

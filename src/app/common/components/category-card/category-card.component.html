@@ -43,7 +43,7 @@
         <mat-icon class="category__action-icon" svgIcon="share"></mat-icon>
         <span>&nbsp;Share Info</span>
       </button>
-      <button mat-button>
+      <button mat-button [routerLink]="['/view/', data?.state]" routerLinkActive="router-link-active">
         <mat-icon class="category__action-icon" svgIcon="share_new_tab"></mat-icon>
         <span> &nbsp;More Details</span>
       </button>

@@ -80,5 +80,9 @@ export class IconService {
       'twitter',
       this.domSanitizer.bypassSecurityTrustResourceUrl('../../../assets/icons/twitter.svg')
     );
+    this.matIconRegistry.addSvgIcon(
+      'phone',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('../../../assets/icons/phone.svg')
+    );
   }
 }

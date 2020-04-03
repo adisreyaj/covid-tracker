@@ -1,0 +1,113 @@
+.district {
+  padding: 16px 24px 100px;
+
+  &__contact {
+    background-color: var(--accent);
+    padding: 16px;
+    margin: 24px 0;
+    p {
+      color: #fff;
+      margin: 0;
+      font-weight: 300;
+      margin-bottom: 4px;
+      &:nth-last-child(1) {
+        font-weight: 600;
+      }
+    }
+    &-icon {
+      display: flex;
+      border-radius: 50%;
+      background-color: var(--background-light);
+      padding: 12px;
+      mat-icon {
+        color: var(--text-primary);
+      }
+    }
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+  &__info {
+    &__search {
+      padding: 12px 0 0;
+      .search {
+        &__input {
+          position: relative;
+          input {
+            background-color: var(--background-light);
+            width: 100%;
+            border: 2px solid var(--accent);
+            box-sizing: border-box;
+            height: 50px;
+            color: var(--text-primary);
+            padding: 0 16px 0 40px;
+            line-height: 50px;
+            &:focus {
+              outline: none;
+              border: 2px solid var(--accent);
+            }
+          }
+
+          .search__icon {
+            position: absolute;
+            left: 8px;
+            height: 50px;
+            color: var(--accent);
+          }
+          button {
+            height: 50px;
+            position: absolute;
+            right: 0px;
+            bottom: 0;
+          }
+        }
+        &__button {
+          border-radius: 0 !important;
+        }
+      }
+    }
+  }
+
+  &__item {
+    padding: 16px;
+    margin: 8px 0;
+    color: var(--text-primary);
+    border: 1px solid var(--text-light);
+    .data {
+      &-value {
+        font-weight: 300 !important;
+        font-size: 14px;
+        margin: 0;
+        color: var(--text-light);
+        span {
+          color: var(--text-primary);
+          font-size: 15px;
+          font-weight: 600;
+        }
+      }
+      &-label {
+        margin: 0;
+        padding: 0;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.section__heading {
+  h3 {
+    padding: 0 8px;
+    margin: 0;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    position: relative;
+    flex: 0 0 25%;
+  }
+  span {
+    height: 1px;
+    width: 90%;
+    margin-right: 8px;
+    background-color: var(--text-light);
+  }
+}
